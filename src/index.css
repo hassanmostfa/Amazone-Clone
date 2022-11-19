@@ -1,13 +1,397 @@
+/*Start Global*/
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(234,237,237);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/*End Global*/
+/* Start Header */
+.header {
+    background-color: #131921;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    
+}
+.header__logo{
+    width: 100px;
+    margin: 18px 20px 0;
+    object-fit: contain;
+}
+.header__optionBasket{
+    display: flex;
+    align-items: center;
+}
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__option{
+    display: flex;
+    flex-direction: column ;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header__optionLineOne{
+    font-size: 10px;
+}
+.header__optionLineTwo{
+    font-size: 13px;
+    font-weight: 800;
+}
+.header__link{
+    color: white;
+    text-decoration: none;
+}
+.header__search{
+    display: flex;
+    flex: 1;
+}
+.header__searchInput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    outline: 0px;
+}
+.header .header__search i{
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+}
+.filter{
+    text-align: center;
+    padding: 5px;
+    background-color: #22303e;
+}
+.filter > p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/* End Header */
+/* Start Home */
+.all__home__rows{
+    z-index: 2;
+    margin-top: -260px;
+}
+.home__row{
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+/* End Home */
+/*Start Product*/
+.product{
+    width: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    max-height: 400px;
+    min-width: 100px;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    z-index: 1;
+}
+.product__info{
+    height: 100px;
+    margin-bottom: 15px;
+}
+.product__price{
+    margin-top: 5px;
+}
+.product__rating {
+    display: flex;
+}
+.product__rating i {
+    color: #ffc107;
+}
+.product > img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+.product > button{
+    background-color: #FFD814;
+    ;
+    border: 1px solid;
+    border-color: #a88734 #9c7e31 #846a29;
+}
+/*End Product*/
+/*Start Checkout*/
+.checkout{
+    display: flex;
+    padding: 20px;
+    height: max-content;
+    background-color: #fff;
+}
+.checkout__ad{
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*End Checkout*/
+/*Start checkoutProduct*/
+.checkoutProduct{
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ccc;
+    margin: 5px auto;
+    padding: 10px;
+}
+.checkoutProduct__image{
+    object-fit: contain;
+    width: 180px;
+    height: 180px;
+}
+.checkoutProduct__info{
+    padding-left: 20px;
+}
+.checkoutProduct__title{
+    font-size: 17px;
+    font-weight: 800;
+}
+.checkoutProduct__rating  {
+    display: flex;
+}
+.checkoutProduct__rating i {
+    color: #ffc107;
+}
+.checkoutProduct__info > button{
+    /* background-color: #f0c14b; */
+    background-color: #FFD814;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+}
+/*End checkoutProduct*/
+/*Start Subtotal*/
+.subtotal{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #f3f3f3;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+.subtotal__gift{
+    display: flex;
+    align-items: center;
+}
+.subtotal__gift > input{
+    margin-right: 5px;
+}
+.subtotal > p {
+    font-size: 25px !important;
+    font-weight: 450;
+    letter-spacing: -1;
+}
+.subtotal > button{
+    background-color: #FFD814;
+    border: 1px solid;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+/*End Subtotal*/
+/*Start Login*/
+.login{
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login__container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border:1px solid lightgray
+}
+.login__container > h1{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.login__container > form > h5{
+    margin-bottom: 5px;
+}
+.login__container > form > input{
+    height: 30px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    width: 98%;
+}
+.login__container > p{
+    margin-top: 15px;
+    font-size: 12px;
+}
+.login__logo{
+    width: 100px;
+    object-fit: contain;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login__signInButton{
+    background-color: #f0c14b;
+    border: 1px solid;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.login__registerButton{
+    background-color: #f0c14b;
+    border: 1px solid;
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+/*End Login*/
+/*Start Swiper*/
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* mask-image: linear-gradient(to bottom , rgba(0,0,0,1) , rgba(0,0,0,0)); */
+    margin-bottom: -15px;
+  }
+  .swiper-button-next{
+    right: 25px !important;
+    left: auto ;
+    top: 161px !important;
+    color: white !important;
+}
+.swiper-button-prev{
+    left: 25px !important;
+    right: auto;
+    top: 161px !important;
+    color: white !important;
+}
+/*End Swiper*/
+/*Start Footer*/
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    background: #232f3e;
+    padding: 30px;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+
+}
+.footer .links h3{
+    color: white;
+    font-size: 17px;
+    margin-left: 40px;
+    margin-bottom: 8px;
+}
+.footer .links ul{
+    text-align: center;
+}
+.footer .links li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.footer .links a{
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+}
+.footer .links a:hover{
+    text-decoration:underline;
+}
+.footer__logo {
+    background-color: #232f3e ;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.footer__logo img{
+    width: 100px;
+    height: 35px;
+}
+.main{
+    display: block;
+}
+.last-head{
+    margin-left: 60px !important;
+    letter-spacing: 1px;
+}
+/*End Footer*/
